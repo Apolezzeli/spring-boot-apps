@@ -23,12 +23,16 @@ public class TrackDTO implements Serializable {
     @Pattern(regexp = "^[0-9a-zA-ZáéíóúÁÉÍÓÚÜüñÑ\\s]*$", message = "title contains not allowed characters")
     private String title;
 
+    @NotBlank(message = "is required")
+    @Pattern(regexp = "^(?:[01]\\d|2[0123]):(?:[012345]\\d):(?:[012345]\\d)$", message = "wrong format, should be HH:MM:SS")
+    private String trackDuration;
+
     private AlbumDTO album;
 
     private List<TrackDTO> tracks;
 
     public Boolean hasNullOrEmptyAttributes() {
         return title == null || title.trim().isEmpty()
-                || album == null;
+                || trackDuration.trim().isEmpty() || trackDuration == null;
     }
 }

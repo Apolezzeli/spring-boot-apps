@@ -1,34 +1,9 @@
-INSERT INTO Artist
-    (id, title, Album_id)
+INSERT INTO Track
+    (id, title, track_duration, Album_id)
 
-    (1, '«Material Girl»', 1),
-    (2, '«Like a Virgin»', 1),
-    (3, '«Angel»', 1),
-    (4, '«Over and Over»', 1),
-    (5, '«Pretender»', 1),
-    (6, '«Like a Prayer»', 2),
-    (7, '«Express Yourself»', 2),
-    (8, '«Till Death Do Us Part»', 2,
-    (9, '«Promise to Try»', 2),
-    (10, '«Oh Father»', 2),
-    (11, '«...Baby One More Time»', 3),
-    (12, '«(You Drive Me) Crazy»', 3),
-    (13, '«Sometimes»', 3),
-    (14, '«Born to Make You Happy»', 3),
-    (15, '«I Will Be There»', 3),
-    (16, '«Oops!... I Did It Again»', 4,
-    (17, '«Stronger»', 4),
-    (18, '«Dont Let Me Be the Last to Know»', 4),
-    (19, '«Lucky»', 4),
-    (20, '«Dear Diary»', 4),
-    (21, '«Paparazzi»', 5),
-    (22, '«Poker Face»', 5),
-    (23, '«Boys Boys Boys»', 5),
-    (24, '«The Fame»', 5),
-    (25, '«Beautiful, Dirty, Rich»', 5),
-    (26, '«Born This Way»', 6),
-    (27, '«Judas»', 6),
-    (28, '«The Edge of Glory»', 6),
-    (29, '«Americano»', 6),
-    (30, '«Bad Kids»', 6),
+VALUES
+    (1, '«Material Girl»', '00:03:45', 1),
+    (2, '«Like a Virgin»', '00:04:06', 1),
+    (3, '«Angel»', '00:03:59', 1),
+    (4, '«Over and Over»', '00:02:37', 1);
 

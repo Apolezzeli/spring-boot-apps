@@ -120,6 +120,9 @@ public class TrackServices implements Services<TrackDTO, Track> {
         if (!entity.getTitle().equals(dto.getTitle()))
             entity.setTitle(dto.getTitle());
 
+        if (!entity.getTrackDuration().equals(dto.getTrackDuration()))
+            entity.setTrackDuration(dto.getTrackDuration());
+
     }
 
     public TrackDTO update(TrackDTO dto, Long albumId, Long trackId) {

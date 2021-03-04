@@ -8,7 +8,7 @@ import javax.validation.constraints.NotNull;
 import javax.validation.constraints.PastOrPresent;
 import javax.validation.constraints.Pattern;
 import java.io.Serializable;
-import java.util.Date;
+import java.time.Year;
 import java.util.List;
 
 @NoArgsConstructor
@@ -36,7 +36,7 @@ public class AlbumDTO implements Serializable {
     @JsonFormat(pattern = "yyyy")
     @NotNull(message = "is required")
     @PastOrPresent(message = "the year must be past or present")
-    private Date released;
+    private Year released;
 
     private ArtistDTO artist;
 

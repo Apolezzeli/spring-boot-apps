@@ -16,7 +16,7 @@ public class TrackController {
     @Autowired
     private TrackServices trackServices;
 
-    @PostMapping({"/albums/{albumsId}/tracks", "/albums/{albumsId}/tracks/"})
+    @PostMapping({"/albums/{albumId}/tracks", "/albums/{albumId}/tracks/"})
     public ResponseEntity postAlbumMethod(
             @Valid @RequestBody TrackDTO dto,
             @PathVariable Long albumId) throws URISyntaxException {
