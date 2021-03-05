@@ -1,5 +1,6 @@
 package ar.com.ada.second.tdvr.model.dto;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 import javax.validation.constraints.NotBlank;
@@ -27,9 +28,9 @@ public class TrackDTO implements Serializable {
     @Pattern(regexp = "^(?:[01]\\d|2[0123]):(?:[012345]\\d):(?:[012345]\\d)$", message = "wrong format, should be HH:MM:SS")
     private String trackDuration;
 
-    private AlbumDTO album;
 
-    private List<TrackDTO> tracks;
+    @JsonIgnoreProperties({"tracks"})
+    private AlbumDTO album;
 
     public Boolean hasNullOrEmptyAttributes() {
         return title == null || title.trim().isEmpty()
